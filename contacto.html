@@ -17,8 +17,11 @@
     <header class="header">
         <div class="header_content">
             <label for="menu-toggle" class="menu-btn">☰</label>
-            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.png" alt="Logo CampusShop"></a>
-            <a href="carrito.html" class="carrito-link"><img class="logo" src="./img/carrito.png" alt="Carrito de compras"></a>
+            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
+            <a href="carrito.html" class="carrito-link">
+                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                <span class="cart-count" id="cartCount" hidden>0</span>
+            </a>
         </div>
     </header>
 
@@ -48,16 +51,16 @@
         <section class="card">
             <div class="card_body">
                 <h2 class="title">Envíanos un mensaje</h2>
-                <form class="contact">
+                <form class="contact" id="contactForm" novalidate>
                     <label for="contactName">Nombre</label>
                     <input class="input" type="text" id="contactName" name="nombre" placeholder="Tu nombre" required>
                     <label for="contactEmail">Correo electrónico</label>
                     <input class="input" type="email" id="contactEmail" name="correo" placeholder="tu@email.com" required>
                     <label for="contactMessage">Mensaje</label>
                     <textarea class="textarea" id="contactMessage" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
-                    <button class="btn">Enviar mensaje</button>
+                    <button class="btn" type="submit">Enviar mensaje</button>
+                    <p class="form-message" id="contactMessageInfo"></p>
                 </form>
-                <p style="color: var(--muted);">* Este formulario es solo visual</p>
             </div>
         </section>
 
@@ -78,5 +81,9 @@
             <p> &#174 CampusShop - Proyecto académico</p>
         </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/storage.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/contacto.js"></script>
 </body>
 </html>

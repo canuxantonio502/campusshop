@@ -17,8 +17,11 @@
     <header class="header">
         <div class="header_content">
             <label for="menu-toggle" class="menu-btn">☰</label>
-            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.png" alt="Logo CampusShop"></a>
-            <a href="carrito.html" class="carrito-link"><img class="logo" src="./img/carrito.png" alt="Carrito de compras"></a>
+            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
+            <a href="carrito.html" class="carrito-link">
+                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                <span class="cart-count" id="cartCount" hidden>0</span>
+            </a>
         </div>
     </header>
 
@@ -39,151 +42,24 @@
         <a class="btn2" href="index.html">Volver al inicio</a>
         <section>
             <h1 class="title">Catálogo</h1>
-            <div class="card" style="padding: 1rem; margin-bottom: 1rem;">
-                <select class="select">
-                    <option class="option">Todos los productos</option>
-                    <option class="option">Más vendidos</option>
-                    <option class="option">En oferta</option>
+            <div class="card catalog-toolbar">
+                <input
+                    class="input"
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar productos..."
+                    aria-label="Buscar productos">
+                <select class="select" id="sortSelect" aria-label="Ordenar productos">
+                    <option class="option" value="todos">Todos los productos</option>
+                    <option class="option" value="vendidos">Más vendidos</option>
+                    <option class="option" value="oferta">En oferta</option>
+                    <option class="option" value="precio-asc">Precio: menor a mayor</option>
+                    <option class="option" value="precio-desc">Precio: mayor a menor</option>
                 </select>
             </div>
-
-            <div class="grid-products">
-                <article class="card">
-                    <img class="product_image" src="./img/auriculares_bluetooth.jpg" alt="Auriculares Bluetooth Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Audífonos Bluetooth</h2>
-                        <div class="precio"><p>Q.199.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/laptop_campus.jpg" alt="Laptop Lenovo Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Laptop Lenovo</h2>
-                        <div class="precio"><p>Q.9,190.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/lenovo.jpg" alt="Laptop Lenovo Legion Pro 7 Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Laptop Lenovo Legion Pro 7</h2>
-                        <div class="precio"><p>Q.45,389.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/mouse_campus.webp" alt="Mouse Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Mouse Campuslands</h2>
-                        <div class="precio"><p>Q.140.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/ssd_campus.png" alt="SSD Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>SSD Campuslands</h2>
-                        <div class="precio"><p>Q.1,500.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/mars-pro.jpg" alt="Parlante Mars Pro">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Parlante Mars Pro</h2>
-                        <div class="precio"><p>Q.2,750.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/sudadera_pro.avif" alt="Sudadera Pro Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Sudadera Pro Campuslands</h2>
-                        <div class="precio"><p>Q.200.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/gorra_campus.webp" alt="Gorra Unisex Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Gorra Unisex</h2>
-                        <div class="precio"><p>Q.120.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/sudadera_campus.webp" alt="Sudadera Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Sudadera Campuslands</h2>
-                        <div class="precio"><p>Q.175.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/playera-campus.webp" alt="Playera Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Playera Campuslands</h2>
-                        <div class="precio"><p>Q.125.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/jogger-nasa.webp" alt="Jogger Nasa Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Jogger Nasa Campuslands</h2>
-                        <div class="precio"><p>Q.150.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/funda_campus.jpg" alt="Funda de Iphone 16 Pro Max Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Funda de Iphone 16 Pro Max</h2>
-                        <div class="precio"><p>Q.180.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/llavero_campus.jpg" alt="Llavero Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Llavero Campuslands</h2>
-                        <div class="precio"><p>Q.50.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/mini-bank.avif" alt="Mini PowerBank Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Mini PowerBank Campuslands</h2>
-                        <div class="precio"><p>Q.350.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/powerward.avif" alt="Powerward Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Powerward Campuslands</h2>
-                        <div class="precio"><p>Q.1,550.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-            </div>
+            <p class="results-count" id="resultsCount"></p>
+            <div class="grid-products" id="productGrid" data-categoria=""></div>
+            <p class="empty-message" id="emptyMessage" hidden>No encontramos productos con esa búsqueda.</p>
         </section>
     </main>
 
@@ -192,5 +68,9 @@
             <p> &#174 CampusShop - Proyecto académico</p>
         </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/storage.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/catalogo.js"></script>
 </body>
 </html>

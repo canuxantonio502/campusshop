@@ -17,8 +17,11 @@
     <header class="header">
         <div class="header_content">
             <label for="menu-toggle" class="menu-btn">☰</label>
-            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.png" alt="Logo CampusShop"></a>
-            <a href="carrito.html" class="carrito-link"><img class="logo" src="./img/carrito.png" alt="Carrito de compras"></a>
+            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
+            <a href="carrito.html" class="carrito-link">
+                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                <span class="cart-count" id="cartCount" hidden>0</span>
+            </a>
         </div>
     </header>
 
@@ -39,43 +42,16 @@
         <a class="btn2" href="catalogo.html">Volver al catálogo</a>
         <br>
         <br>
+        <h1 class="title">Comparador</h1>
+        <div class="card compare-toolbar">
+            <select class="select" id="compareA" aria-label="Primer producto"></select>
+            <select class="select" id="compareB" aria-label="Segundo producto"></select>
+        </div>
 
         <section>
             <table class="comparar-table">
-                <thead>
-                    <tr>
-                        <th>
-                            <img src="./img/sudadera_pro.avif" alt="Sudadera Pro Campuslands" class="product_image">
-                            <p>Sudadera Pro Campuslands</p>
-                        </th>
-                        <th>
-                            <img src="./img/sudadera_campus.webp" alt="Sudadera Campuslands" class="product_image">
-                            <p>Sudadera Campuslands</p>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Q.200.00</strong></td>
-                        <td><strong>Q.175.00</strong></td>
-                    </tr>
-                    <tr>
-                        <td>Negra, temática Campuslands, efecto fluorescente en la oscuridad.</td>
-                        <td>Beige, temática Campuslands.</td>
-                    </tr>
-                    <tr>
-                        <td>Material de buena calidad, cómoda y resistente.</td>
-                        <td>Material de buena calidad, cómoda y resistente.</td>
-                    </tr>
-                    <tr>
-                        <td><span class="badge">Garantía</span> <span class="badge2">Últimas</span></td>
-                        <td><span class="badge">Garantía</span> <span class="badge">En stock</span></td>
-                    </tr>
-                    <tr>
-                        <td><button class="btn">Agregar al carrito</button></td>
-                        <td><button class="btn">Agregar al carrito</button></td>
-                    </tr>
-                </tbody>
+                <thead id="compareHead"></thead>
+                <tbody id="compareBody"></tbody>
             </table>
         </section>
     </main>
@@ -85,5 +61,9 @@
             <p> &#174 CampusShop - Proyecto académico</p>
         </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/storage.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/comparador.js"></script>
 </body>
 </html>

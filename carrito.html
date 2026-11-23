@@ -17,8 +17,11 @@
     <header class="header">
         <div class="header_content">
             <label for="menu-toggle" class="menu-btn">☰</label>
-            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.png" alt="Logo CampusShop"></a>
-            <a href="carrito.html" class="carrito-link"><img class="logo" src="./img/carrito.png" alt="Carrito de compras"></a>
+            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
+            <a href="carrito.html" class="carrito-link">
+                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                <span class="cart-count" id="cartCount" hidden>0</span>
+            </a>
         </div>
     </header>
 
@@ -37,51 +40,28 @@
 
     <main class="main_content">
         <a class="btn2" href="catalogo.html">Volver al catálogo</a>
-        <section class="content-section">
-            <h2 class="section-title">Mis productos de esta compra:</h2>
-            <div class="grid-products">
-                <article class="card">
-                    <img class="product_image" src="./img/mouse_campus.webp" alt="Mouse Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Mouse Campuslands</h2>
-                        <div class="precio_total"><p>Q.140.00</p>
-                        <button class="btn"><a href="./mouse.html">Ver producto</a></button>
-                        <button class="btn">Quitar producto</button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/gorra_campus.webp" alt="Gorra Unisex Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Gorra Unisex Campuslands</h2>
-                        <div class="precio_total"><p>Q.120.00</p>
-                        <button class="btn"><a href="./gorra.html">Ver producto</a></button>
-                        <button class="btn">Quitar producto</button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/jogger-nasa.webp" alt="Jogger Nasa Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Jogger Nasa Campuslands</h2>
-                        <div class="precio_total"><p>Q.150.00</p>
-                        <button class="btn"><a href="./jogger.html">Ver producto</a></button>
-                        <button class="btn">Quitar producto</button></div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <hr>
-        <section class="content-section">
+        <section class="content-section" id="cartSection">
+            <h2 class="section-title">Mi carrito</h2>
+            <div class="cart-list" id="cartItems"></div>
+            <hr>
             <article class="card">
                 <div class="card_body">
                     <span class="badge">Total</span>
-                    <h2>Pedido #12345</h2>
-                    <div class="precio_total"><p>Q.410.00</p>
-                    <button class="btn"><a href="./checkout.html">Terminar compra</a></button></div>
+                    <div class="precio_total">
+                        <p id="cartTotal">Q.0.00</p>
+                        <button class="btn btn-outline" type="button" id="clearCartBtn">Vaciar carrito</button>
+                        <a class="btn" href="checkout.html">Terminar compra</a>
+                    </div>
                 </div>
             </article>
+        </section>
+
+        <section class="card_empty" id="cartEmpty" hidden>
+            <div class="card_body_empty">
+                <h2 class="title">Tu carrito está vacío</h2>
+                <div class="carrito"><img src="./img/carrito.png" alt="Carrito vacío"></div>
+                <a class="btn" href="catalogo.html">Ver productos</a>
+            </div>
         </section>
     </main>
 
@@ -90,5 +70,9 @@
             <p> &#174 CampusShop - Proyecto académico</p>
         </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/storage.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/carrito.js"></script>
 </body>
 </html>

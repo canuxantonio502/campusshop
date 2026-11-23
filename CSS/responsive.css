@@ -21,3 +21,17 @@
         padding: 2rem 0;
     }
 }
+@media (min-width: 640px){
+    .catalog-toolbar {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (min-width: 640px){
+    .cart-item {
+        grid-template-columns: 90px 1fr auto;
+    }
+    .cart-item-actions {
+        grid-column: auto;
+    }
+}

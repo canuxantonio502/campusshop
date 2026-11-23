@@ -17,8 +17,11 @@
     <header class="header">
         <div class="header_content">
             <label for="menu-toggle" class="menu-btn">☰</label>
-            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.png" alt="Logo CampusShop"></a>
-            <a href="carrito.html" class="carrito-link"><img class="logo" src="./img/carrito.png" alt="Carrito de compras"></a>
+            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
+            <a href="carrito.html" class="carrito-link">
+                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                <span class="cart-count" id="cartCount" hidden>0</span>
+            </a>
         </div>
     </header>
 
@@ -39,18 +42,11 @@
         <a class="btn2" href="catalogo.html">Volver al catálogo</a>
         <br>
         <br>
-        <section class="card">
-            <img src="./img/gorra_campus.webp" alt="Gorra Unisex Campuslands" class="product_image">
-            <div class="card_body">
-                <h1 class="title">Gorra Unisex Campuslands</h1>
-                <p><strong>Q.120.00</strong></p>
-                <p>Gorra de algodón, cómoda y con diseño único.</p>
-                <div style="display: flex; gap: 5rem; flex-wrap: wrap; margin: 1rem 0;">
-                    <span class="badge">Garantía</span>
-                    <span class="badge">En stock</span>
-                </div>
-                <button class="btn">Agregar al carrito</button>
-            </div>
+        <section class="card product-detail" id="productDetail"></section>
+
+        <section class="content-section" id="relatedSection" hidden>
+            <h2 class="section-title">También te puede interesar</h2>
+            <div class="grid-products" id="relatedProducts"></div>
         </section>
     </main>
 
@@ -59,5 +55,9 @@
             <p> &#174 CampusShop - Proyecto académico</p>
         </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/storage.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/producto.js"></script>
 </body>
 </html>
