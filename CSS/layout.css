@@ -153,3 +153,8 @@ main {
 .menu a:hover {
     background-color: var(--primary-dark);
 }
+
+/* Páginas de formularios con un ancho cómodo de lectura */
+.page-narrow {
+    width: min(100% - 2rem, 720px);
+}
