@@ -8,7 +8,7 @@ const PRODUCTS = [
         precio: 199,
         precioAnterior: 249,
         descripcion: "Audífonos inalámbricos con sonido envolvente, almohadillas cómodas y batería de larga duración.",
-        imagen: "./img/auriculares_bluetooth.jpg",
+        imagen: "./img/auriculares_bluetooth.webp",
         stock: 12,
         vendidos: 48,
         destacado: false
@@ -53,7 +53,7 @@ const PRODUCTS = [
         categoria: "tecnologia",
         precio: 1500,
         descripcion: "Unidad de estado sólido de alta velocidad para que tu equipo arranque y cargue en segundos.",
-        imagen: "./img/ssd_campus.png",
+        imagen: "./img/ssd_campus.webp",
         stock: 8,
         vendidos: 21,
         destacado: false
@@ -136,7 +136,7 @@ const PRODUCTS = [
         categoria: "accesorios",
         precio: 180,
         descripcion: "Funda resistente a golpes con diseño Campuslands para iPhone 16 Pro Max.",
-        imagen: "./img/funda_campus.jpg",
+        imagen: "./img/funda_campus.webp",
         stock: 14,
         vendidos: 19,
         destacado: false
