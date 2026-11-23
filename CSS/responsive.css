@@ -52,3 +52,19 @@
         flex: 0 0 auto;
     }
 }
+
+/* Detalle de producto en dos columnas: imagen e información */
+@media (min-width: 768px){
+    .product-detail {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+    }
+    .product-detail .product_image {
+        max-height: 460px;
+        border-right: 1px solid var(--border);
+    }
+    .product-detail .card_body {
+        padding: 2rem;
+    }
+}

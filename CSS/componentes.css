@@ -453,7 +453,9 @@ label {
 
 /* ================= DETALLE DE PRODUCTO ================= */
 .product-detail .product_image {
-    max-height: 480px;
+    width: 100%;
+    max-height: 360px;
+    padding: 1rem;
     object-fit: contain;
     background: var(--surface);
 }
@@ -467,11 +469,16 @@ label {
     flex-wrap: wrap;
     margin: 1rem 0;
 }
+
+/* Cantidad y agregar en una fila, comparar debajo a todo el ancho */
 .detail-actions {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
     align-items: center;
+}
+.detail-actions .btn-outline {
+    grid-column: 1 / -1;
 }
 
 /* ================= SELECTOR DE CANTIDAD ================= */
