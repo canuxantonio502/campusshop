@@ -544,3 +544,25 @@ label {
 .order-info p {
     margin: 0.3rem 0;
 }
+
+/* ================= COMPARADOR ================= */
+.comparar-table {
+    display: table;
+    table-layout: fixed;
+}
+.compare-toolbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+.comparar-table th p {
+    margin: 0.5rem 0 0;
+}
+.comparar-table .row-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+}
