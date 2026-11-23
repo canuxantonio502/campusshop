@@ -240,19 +240,28 @@ label {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     overflow: hidden;
-    height: 100%;
 }
 .card_body_empty {
     align-items: center;
-    padding: 20px 10px;
+    text-align: center;
+    padding: 2.5rem 1rem;
 }
-.card_body_empty img {
+.card_body_empty .title {
+    font-size: 1.5rem;
+}
+.card_body_empty p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* Ícono del carrito vacío en tamaño moderado */
+.carrito {
+    width: 96px;
+    opacity: 0.6;
+}
+.carrito img {
     width: 100%;
     height: auto;
-    display: flex;
-}
-.carrito {
-    width: 45%;
 }
 .btn_pay {
     display: flex;
