@@ -42,70 +42,24 @@
         <a class="btn2" href="index.html">Volver al inicio</a>
         <section>
             <h1 class="title">Tecnología</h1>
-            <div class="card" style="padding: 1rem; margin-bottom: 1rem;">
-                <select class="select">
-                    <option class="option">Todos los productos</option>
-                    <option class="option">Más vendidos</option>
-                    <option class="option">En oferta</option>
+            <div class="card catalog-toolbar">
+                <input
+                    class="input"
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar productos..."
+                    aria-label="Buscar productos">
+                <select class="select" id="sortSelect" aria-label="Ordenar productos">
+                    <option class="option" value="todos">Todos los productos</option>
+                    <option class="option" value="vendidos">Más vendidos</option>
+                    <option class="option" value="oferta">En oferta</option>
+                    <option class="option" value="precio-asc">Precio: menor a mayor</option>
+                    <option class="option" value="precio-desc">Precio: mayor a menor</option>
                 </select>
             </div>
-
-            <div class="grid-products">
-                <article class="card">
-                    <img class="product_image" src="./img/auriculares_bluetooth.jpg" alt="Auriculares Bluetooth Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Audífonos Bluetooth</h2>
-                        <div class="precio"><p>Q.199.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/laptop_campus.jpg" alt="Laptop Lenovo Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Laptop Lenovo</h2>
-                        <div class="precio"><p>Q.9,190.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/lenovo.jpg" alt="Laptop Lenovo Legion Pro 7 Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Laptop Lenovo Legion Pro 7</h2>
-                        <div class="precio"><p>Q.45,389.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/mouse_campus.webp" alt="Mouse Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Mouse Campuslands</h2>
-                        <div class="precio"><p>Q.140.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/ssd_campus.png" alt="SSD Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>SSD Campuslands</h2>
-                        <div class="precio"><p>Q.1,500.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/mars-pro.jpg" alt="Parlante Mars Pro">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Parlante Mars Pro</h2>
-                        <div class="precio"><p>Q.2,750.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-            </div>
+            <p class="results-count" id="resultsCount"></p>
+            <div class="grid-products" id="productGrid" data-categoria="tecnologia"></div>
+            <p class="empty-message" id="emptyMessage" hidden>No encontramos productos con esa búsqueda.</p>
         </section>
     </main>
 
@@ -117,5 +71,6 @@
     <script src="./JS/productos.js"></script>
     <script src="./JS/storage.js"></script>
     <script src="./JS/ui.js"></script>
+    <script src="./JS/catalogo.js"></script>
 </body>
 </html>

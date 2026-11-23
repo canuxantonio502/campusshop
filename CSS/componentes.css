@@ -375,3 +375,21 @@ label {
 .form-message.error {
     color: #EB2F1A;
 }
+
+/* ================= CATÁLOGO ================= */
+.catalog-toolbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1rem;
+    margin: 1rem 0 0.5rem;
+}
+.results-count {
+    color: var(--muted);
+    margin: 0 0 1rem;
+}
+.empty-message {
+    text-align: center;
+    color: var(--muted);
+    padding: 2rem 1rem;
+}

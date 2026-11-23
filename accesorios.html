@@ -42,52 +42,24 @@
         <a class="btn2" href="index.html">Volver al inicio</a>
         <section>
             <h1 class="title">Accesorios</h1>
-            <div class="card" style="padding: 1rem; margin-bottom: 1rem;">
-                <select class="select">
-                    <option class="option">Todos los productos</option>
-                    <option class="option">Más vendidos</option>
-                    <option class="option">En oferta</option>
+            <div class="card catalog-toolbar">
+                <input
+                    class="input"
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar productos..."
+                    aria-label="Buscar productos">
+                <select class="select" id="sortSelect" aria-label="Ordenar productos">
+                    <option class="option" value="todos">Todos los productos</option>
+                    <option class="option" value="vendidos">Más vendidos</option>
+                    <option class="option" value="oferta">En oferta</option>
+                    <option class="option" value="precio-asc">Precio: menor a mayor</option>
+                    <option class="option" value="precio-desc">Precio: mayor a menor</option>
                 </select>
             </div>
-
-            <div class="grid-products">
-                <article class="card">
-                    <img class="product_image" src="./img/funda_campus.jpg" alt="Funda de Iphone 16 Pro Max Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Funda de Iphone 16 Pro Max</h2>
-                        <div class="precio"><p>Q.180.00</p>
-                        <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/llavero_campus.jpg" alt="Llavero Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Llavero Campuslands</h2>
-                        <div class="precio"><p>Q.50.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/mini-bank.avif" alt="Mini PowerBank Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Mini PowerBank Campuslands</h2>
-                        <div class="precio"><p>Q.350.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/powerward.avif" alt="Powerward Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Powerward Campuslands</h2>
-                        <div class="precio"><p>Q.1,550.00</p>
-                            <button class="btn"><a href="./producto.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-            </div>
+            <p class="results-count" id="resultsCount"></p>
+            <div class="grid-products" id="productGrid" data-categoria="accesorios"></div>
+            <p class="empty-message" id="emptyMessage" hidden>No encontramos productos con esa búsqueda.</p>
         </section>
     </main>
 
@@ -99,5 +71,6 @@
     <script src="./JS/productos.js"></script>
     <script src="./JS/storage.js"></script>
     <script src="./JS/ui.js"></script>
+    <script src="./JS/catalogo.js"></script>
 </body>
 </html>
