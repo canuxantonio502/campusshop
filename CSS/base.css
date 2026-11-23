@@ -19,7 +19,31 @@
     --shadow: 0 4px 20px rgba(17,24,39,0.08);
     --radius: 8px;
     --container: 1200px;
+    color-scheme: light;
 }
+
+/* ================= TEMA OSCURO ================= */
+:root[data-theme="dark"] {
+    --background: #0F1411;
+    --surface: #1A211C;
+    --text: #E8ECE9;
+    --muted: #9BA59E;
+    --primary: #0B7F1B;
+    --primary-dark: #096E17;
+    --primary-text: #6FCF7C;
+    --primary-soft: #1F3324;
+    --border: #2C352F;
+    --badge-bg: #243028;
+    --badge-text: #A7E3AF;
+    --danger: #FF6B5A;
+    --danger-bg: #3A1F1C;
+    --menu-bg: #14301A;
+    --image-bg: #F2F2F0;
+    --overlay: rgba(0, 0, 0, 0.6);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+}
+
 * {
     box-sizing: border-box;
 }
