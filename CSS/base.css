@@ -71,4 +71,8 @@ button, input, select, textarea {
 .container {
     width: min(100% -2rem, var(--container));
     margin-inline: auto;
+}hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0;
 }
