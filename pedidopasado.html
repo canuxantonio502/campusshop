@@ -39,49 +39,14 @@
     </nav>
 
     <main class="main_content">
-        <a class="btn2" href="index.html">Volver al inicio</a>
-        <section class="content-section">
-            <h2 class="section-title">Mis productos de esta compra:</h2>
-            <div class="grid-products">
-                <article class="card">
-                    <img class="product_image" src="./img/mouse_campus.webp" alt="Mouse Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Mouse Campuslands</h2>
-                        <div class="precio_total"><p>Q.140.00</p>
-                        <button class="btn"><a href="./mouse.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/gorra_campus.webp" alt="Gorra Unisex Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Gorra Unisex Campuslands</h2>
-                        <div class="precio_total"><p>Q.120.00</p>
-                        <button class="btn"><a href="./gorra.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/jogger-nasa.webp" alt="Jogger Nasa Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Jogger Nasa Campuslands</h2>
-                        <div class="precio_total"><p>Q.150.00</p>
-                        <button class="btn"><a href="./jogger.html">Ver producto</a></button></div>
-                    </div>
-                </article>
+        <a class="btn2" href="historial.html">Volver al historial</a>
+        <section class="card order-success" id="orderSuccess" hidden>
+            <div class="card_body">
+                <h2 class="title">¡Gracias por tu compra!</h2>
+                <p>Tu pedido fue registrado correctamente.</p>
             </div>
         </section>
-        <hr>
-        <section class="content-section">
-            <article class="card">
-                <div class="card_body">
-                    <span class="badge">Total</span>
-                    <h2>Pedido #12345</h2>
-                    <div class="precio_total"><p>Q.410.00</p></div>
-                </div>
-            </article>
-        </section>
+        <div id="orderDetail"></div>
     </main>
 
     <footer class="footer">
@@ -92,5 +57,6 @@
     <script src="./JS/productos.js"></script>
     <script src="./JS/storage.js"></script>
     <script src="./JS/ui.js"></script>
+    <script src="./JS/pedido.js"></script>
 </body>
 </html>

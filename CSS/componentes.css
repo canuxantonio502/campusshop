@@ -526,3 +526,21 @@ label {
 .btn_pay:hover {
     background: var(--primary-dark);
 }
+
+/* ================= HISTORIAL Y PEDIDOS ================= */
+.orders-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.orders-list h2 {
+    margin: 0.5rem 0;
+}
+.order-success {
+    margin: 1rem 0;
+    border-color: var(--primary);
+    background: #E8F5E6;
+}
+.order-info p {
+    margin: 0.3rem 0;
+}
