@@ -312,27 +312,57 @@ label {
     display: flex;
     flex-direction: column;
 }
+.product-card-image {
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+}
 .product-card .card_body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     flex: 1;
+    padding: 0.75rem;
 }
+.product-card .badge,
+.product-card .badge2 {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+}
+
+/* El nombre ocupa máximo dos líneas para alinear las tarjetas */
 .product-card h2 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.6em;
 }
-.product-card .precio {
-    margin-top: auto;
-    padding: 0.5rem 0;
-}
-.product-card .precio p {
+.product-price {
     margin: 0;
     font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.4rem;
 }
 .old-price {
     color: var(--muted);
     font-weight: normal;
+    font-size: 0.8rem;
+}
+
+/* Botones de la tarjeta: uno debajo del otro y del mismo ancho */
+.card-actions {
+    margin-top: auto;
+    display: grid;
+    gap: 0.5rem;
+}
+.card-actions .btn {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
     font-size: 0.9rem;
 }
 .btn-outline {
