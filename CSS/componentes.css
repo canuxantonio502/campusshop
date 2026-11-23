@@ -268,3 +268,110 @@ label {
     margin: auto;
     border-radius: var(--radius);
 }
+
+/* ================= CONTADOR DEL CARRITO ================= */
+.carrito-link {
+    position: relative;
+}
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-count[hidden] {
+    display: none;
+}
+
+/* ================= TARJETA DE PRODUCTO ================= */
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+.product-card .card_body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+.product-card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.product-card .precio {
+    margin-top: auto;
+    padding: 0.5rem 0;
+}
+.product-card .precio p {
+    margin: 0;
+    font-weight: bold;
+}
+.old-price {
+    color: var(--muted);
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+.btn-outline {
+    background: var(--surface);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-outline:hover {
+    color: #fff;
+}
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+.badge,
+.badge2 {
+    width: fit-content;
+}
+
+/* ================= NOTIFICACIÓN ================= */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translate(-50%, 150%);
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    background: var(--primary-dark);
+    color: #fff;
+    box-shadow: var(--shadow);
+    z-index: 50;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+.toast-visible {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+.toast-error {
+    background: #EB2F1A;
+}
+
+/* ================= MENSAJES DE FORMULARIO ================= */
+.form-message {
+    min-height: 1.5rem;
+    margin: 0.8rem 0 0;
+    font-weight: bold;
+}
+.form-message.success {
+    color: var(--primary);
+}
+.form-message.error {
+    color: #EB2F1A;
+}
