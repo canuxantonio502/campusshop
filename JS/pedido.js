@@ -21,8 +21,8 @@ function renderOrder() {
                         <div class="card_body">
                             <span class="badge">Cantidad ${item.cantidad}</span>
                             <h2>${item.nombre}</h2>
-                            <div class="precio_total">
-                                <p>${formatPrice(item.precio * item.cantidad)}</p>
+                            <p class="product-price">${formatPrice(item.precio * item.cantidad)}</p>
+                            <div class="card-actions">
                                 <a class="btn" href="producto.html?id=${item.id}">Ver producto</a>
                             </div>
                         </div>
