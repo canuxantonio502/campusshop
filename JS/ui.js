@@ -41,19 +41,23 @@ function renderProductCard(product) {
 
     return `
         <article class="card product-card">
-            <a href="producto.html?id=${product.id}">
+            <a class="product-card-image" href="producto.html?id=${product.id}">
                 <img class="product_image" src="${product.imagen}" alt="${product.nombre}" loading="lazy" decoding="async">
             </a>
             <div class="card_body">
                 ${badge}
                 <h2>${product.nombre}</h2>
-                <div class="precio">
-                    <p>${oldPrice} ${formatPrice(product.precio)}</p>
+                <p class="product-price">${oldPrice} ${formatPrice(product.precio)}</p>
+                <div class="card-actions">
                     <a class="btn" href="producto.html?id=${product.id}">Ver producto</a>
+                    <button
+                        class="btn btn-outline"
+                        type="button"
+                        data-add-to-cart="${product.id}"
+                        aria-label="Agregar ${product.nombre} al carrito">
+                        Agregar
+                    </button>
                 </div>
-                <button class="btn btn-outline" type="button" data-add-to-cart="${product.id}">
-                    Agregar al carrito
-                </button>
             </div>
         </article>
     `
@@ -108,20 +112,12 @@ document.addEventListener("click", e => {
     }
 })
 
-// Cerramos el menú lateral con Escape o al hacer clic fuera de él
+// Cerramos el menú lateral con Escape
+// (el clic fuera del menú lo maneja el fondo .menu-overlay)
 const menuToggle = document.getElementById("menu-toggle")
 
 document.addEventListener("keydown", e => {
     if (e.key === "Escape" && menuToggle) {
-        menuToggle.checked = false
-    }
-})
-
-document.addEventListener("click", e => {
-    if (!menuToggle || !menuToggle.checked) return
-
-    const insideMenu = e.target.closest(".menu, .menu-btn, #menu-toggle")
-    if (!insideMenu) {
         menuToggle.checked = false
     }
 })

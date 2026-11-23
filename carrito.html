@@ -16,9 +16,9 @@
 <body>
     <header class="header">
         <div class="header_content">
-            <label for="menu-toggle" class="menu-btn">☰</label>
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">☰</label>
             <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
-            <a href="carrito.html" class="carrito-link">
+            <a href="carrito.html" class="carrito-link" aria-label="Carrito de compras">
                 <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
                 <span class="cart-count" id="cartCount" hidden>0</span>
             </a>
@@ -28,15 +28,17 @@
     <input type="checkbox" id="menu-toggle">
 
     <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
-        <li><a href="historial.html">Historial</a></li>
-        <li><a href="perfil.html">Perfil</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+        <label for="menu-toggle" class="menu-close" aria-label="Cerrar menú">&times;</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
     </nav>
+    <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
 
     <main class="main_content">
         <a class="btn2" href="catalogo.html">Volver al catálogo</a>
@@ -58,8 +60,9 @@
 
         <section class="card_empty" id="cartEmpty" hidden>
             <div class="card_body_empty">
+                <div class="carrito"><img src="./img/carrito.png" alt="" aria-hidden="true"></div>
                 <h2 class="title">Tu carrito está vacío</h2>
-                <div class="carrito"><img src="./img/carrito.png" alt="Carrito vacío"></div>
+                <p>Agrega productos desde el catálogo para comenzar tu compra.</p>
                 <a class="btn" href="catalogo.html">Ver productos</a>
             </div>
         </section>

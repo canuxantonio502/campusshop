@@ -11,7 +11,7 @@ const PRODUCTS = [
         imagen: "./img/auriculares_bluetooth.webp",
         stock: 12,
         vendidos: 48,
-        destacado: false
+        destacado: true
     },
     {
         id: "laptop-lenovo",
