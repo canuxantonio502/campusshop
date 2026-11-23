@@ -51,16 +51,16 @@
         <section class="card">
             <div class="card_body">
                 <h2 class="title">Envíanos un mensaje</h2>
-                <form class="contact">
+                <form class="contact" id="contactForm" novalidate>
                     <label for="contactName">Nombre</label>
                     <input class="input" type="text" id="contactName" name="nombre" placeholder="Tu nombre" required>
                     <label for="contactEmail">Correo electrónico</label>
                     <input class="input" type="email" id="contactEmail" name="correo" placeholder="tu@email.com" required>
                     <label for="contactMessage">Mensaje</label>
                     <textarea class="textarea" id="contactMessage" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
-                    <button class="btn">Enviar mensaje</button>
+                    <button class="btn" type="submit">Enviar mensaje</button>
+                    <p class="form-message" id="contactMessageInfo"></p>
                 </form>
-                <p style="color: var(--muted);">* Este formulario es solo visual</p>
             </div>
         </section>
 
@@ -84,5 +84,6 @@
     <script src="./JS/productos.js"></script>
     <script src="./JS/storage.js"></script>
     <script src="./JS/ui.js"></script>
+    <script src="./JS/contacto.js"></script>
 </body>
 </html>
