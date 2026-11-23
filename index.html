@@ -44,12 +44,13 @@
                 <p class="badge" >Campuslands E-commerce</p>
                 <h1 class="title" style="margin: 0;">Bienvenido a CampusShop</h1>
                 <p>Compra productos dentro del entorno Campus</p>
-                <form class="search-bar" action="#" method="get">
+                <form class="search-bar" action="catalogo.html" method="get">
                     <input 
                         class="input search-bar"
                         type="search"
                         name="buscar"
-                        placeholder="Buscar productos...">
+                        placeholder="Buscar productos..."
+                        aria-label="Buscar productos">
                     <button class="btn search-btn" type="submit">Buscar</button>
                 </form>
             </div>
@@ -66,35 +67,7 @@
 
         <section class="content-section">
             <h2 class="section-title">Productos destacados</h2>
-            <div class="grid-products">
-                <article class="card">
-                    <img class="product_image" src="./img/mouse_campus.webp" alt="Mouse Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Mouse Campuslands</h2>
-                        <div class="precio"><p>Q.140.00</p>
-                        <button class="btn"><a href="./mouse.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/gorra_campus.webp" alt="Gorra Unisex Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Gorra Unisex Campuslands</h2>
-                        <div class="precio"><p>Q.120.00</p>
-                        <button class="btn"><a href="./gorra.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/jogger-nasa.webp" alt="Jogger Nasa Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Jogger Nasa Campuslands</h2>
-                        <div class="precio"><p>Q.150.00</p>
-                        <button class="btn"><a href="./jogger.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-            </div>
+            <div class="grid-products" id="featuredProducts"></div>
         </section>
     </main>
 
@@ -106,5 +79,6 @@
     <script src="./JS/productos.js"></script>
     <script src="./JS/storage.js"></script>
     <script src="./JS/ui.js"></script>
+    <script src="./JS/catalogo.js"></script>
 </body>
 </html>
