@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusShop - GT</title>
+    <title>Inicio - CampusShop GT</title>
+    <link rel="icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/componentes.css">
     <link rel="stylesheet" href="./CSS/layout.css">
@@ -15,29 +16,29 @@
 <body>
     <header class="header">
         <div class="header_content">
-            <label for="menu-toggle" class="menu-btn">☰</label>
-            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.png" alt="Logo CampusShop"></a>
-            <a href="carrito.html" class="carrito-link"><img class="logo" src="./img/carrito.png" alt="Carrito de compras"></a>
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">☰</label>
+            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
+            <a href="carrito.html" class="carrito-link" aria-label="Carrito de compras">
+                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                <span class="cart-count" id="cartCount" hidden>0</span>
+            </a>
         </div>
-
-        <input type="checkbox" id="menu-toggle">
-
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <br>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <br>
-            <li><a href="carrito.html">Carrito</a></li>
-            <br>
-            <li><a href="historial.html">Historial</a></li>
-            <br>
-            <li><a href="perfil.html">Perfil</a></li>
-            <br>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
     </header>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <nav class="menu">
+        <label for="menu-toggle" class="menu-close" aria-label="Cerrar menú">&times;</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
 
     <main class="main_content">
         <section class="card">
@@ -45,12 +46,13 @@
                 <p class="badge" >Campuslands E-commerce</p>
                 <h1 class="title" style="margin: 0;">Bienvenido a CampusShop</h1>
                 <p>Compra productos dentro del entorno Campus</p>
-                <form class="search-bar" action="#" method="get">
+                <form class="search-bar" action="catalogo.html" method="get">
                     <input 
                         class="input search-bar"
                         type="search"
                         name="buscar"
-                        placeholder="Buscar productos...">
+                        placeholder="Buscar productos..."
+                        aria-label="Buscar productos">
                     <button class="btn search-btn" type="submit">Buscar</button>
                 </form>
             </div>
@@ -67,35 +69,7 @@
 
         <section class="content-section">
             <h2 class="section-title">Productos destacados</h2>
-            <div class="grid-products">
-                <article class="card">
-                    <img class="product_image" src="./img/mouse_campus.webp" alt="Mouse Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Mouse Campuslands</h2>
-                        <div class="precio"><p>Q.140.00</p>
-                        <button class="btn"><a href="./mouse.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/gorra_campus.webp" alt="Gorra Unisex Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Gorra Unisex Campuslands</h2>
-                        <div class="precio"><p>Q.120.00</p>
-                        <button class="btn"><a href="./gorra.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-                <article class="card">
-                    <img class="product_image" src="./img/jogger-nasa.webp" alt="Jogger Nasa Campuslands">
-                    <div class="card_body">
-                        <span class="badge">Oferta</span>
-                        <h2>Jogger Nasa Campuslands</h2>
-                        <div class="precio"><p>Q.150.00</p>
-                        <button class="btn"><a href="./jogger.html">Ver producto</a></button></div>
-                    </div>
-                </article>
-            </div>
+            <div class="grid-products" id="featuredProducts"></div>
         </section>
     </main>
 
@@ -104,5 +78,9 @@
             <p> &#174 CampusShop - Proyecto académico</p>
         </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/storage.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/catalogo.js"></script>
 </body>
 </html>

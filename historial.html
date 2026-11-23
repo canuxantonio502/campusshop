@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusShop - GT</title>
+    <title>Historial de compras - CampusShop GT</title>
+    <link rel="icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/componentes.css">
     <link rel="stylesheet" href="./CSS/layout.css">
@@ -15,73 +16,41 @@
 <body>
     <header class="header">
         <div class="header_content">
-            <label for="menu-toggle" class="menu-btn">☰</label>
-            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.png" alt="Logo CampusShop"></a>
-            <a href="carrito.html" class="carrito-link"><img class="logo" src="./img/carrito.png" alt="Carrito de compras"></a>
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">☰</label>
+            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
+            <a href="carrito.html" class="carrito-link" aria-label="Carrito de compras">
+                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                <span class="cart-count" id="cartCount" hidden>0</span>
+            </a>
         </div>
     </header>
 
     <input type="checkbox" id="menu-toggle">
 
     <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <br>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <br>
-        <li><a href="carrito.html">Carrito</a></li>
-        <br>
-        <li><a href="historial.html">Historial</a></li>
-        <br>
-        <li><a href="perfil.html">Perfil</a></li>
-        <br>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+        <label for="menu-toggle" class="menu-close" aria-label="Cerrar menú">&times;</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
     </nav>
+    <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
 
     <main class="main_content">
         <a class="btn2" href="index.html">Volver al inicio</a>
-        <br>
-        <br>
-        <section class="content-section">
-            <article class="card">
-                <div class="card_body">
-                    <span class="badge">17/08/2025</span>
-                    <h2>Pedido #87365</h2>
-                    <div class="precio_total"><p>Q.4,100.00</p>
-                    <button class="btn"><a href="./pedidopasado.html">Ver compra</a></button></div>
-                </div>
-            </article>
-        </section>
-        <section class="content-section">
-            <article class="card">
-                <div class="card_body">
-                    <span class="badge">22/12/2025</span>
-                    <h2>Pedido #92875</h2>
-                    <div class="precio_total"><p>Q.380.00</p>
-                    <button class="btn"><a href="./pedidopasado.html">Ver compra</a></button></div>
-                </div>
-            </article>
-        </section>
-        <section class="content-section">
-            <article class="card">
-                <div class="card_body">
-                    <span class="badge">24/02/2026</span>
-                    <h2>Pedido #92756</h2>
-                    <div class="precio_total"><p>Q.1,389.00</p>
-                    <button class="btn"><a href="./pedidopasado.html">Ver compra</a></button></div>
-                </div>
-            </article>
-        </section>
-        <section class="content-section">
-            <article class="card">
-                <div class="card_body">
-                    <span class="badge">10/04/2026</span>
-                    <h2>Pedido #12345</h2>
-                    <div class="precio_total"><p>Q.410.00</p>
-                    <button class="btn"><a href="./pedidopasado.html">Ver compra</a></button></div>
-                </div>
-            </article>
+        <h1 class="title">Historial de compras</h1>
+        <div class="orders-list" id="ordersList"></div>
+
+        <section class="card_empty" id="ordersEmpty" hidden>
+            <div class="card_body_empty">
+                <h2 class="title">Aún no tienes compras</h2>
+                <p>Cuando completes un pedido aparecerá aquí.</p>
+                <a class="btn" href="catalogo.html">Ver productos</a>
+            </div>
         </section>
     </main>
 
@@ -90,5 +59,9 @@
             <p> &#174 CampusShop - Proyecto académico</p>
         </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/storage.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/historial.js"></script>
 </body>
 </html>

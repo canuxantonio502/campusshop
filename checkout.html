@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusShop - GT</title>
+    <title>Checkout - CampusShop GT</title>
+    <link rel="icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/componentes.css">
     <link rel="stylesheet" href="./CSS/layout.css">
@@ -15,100 +16,84 @@
 <body>
     <header class="header">
         <div class="header_content">
-            <label for="menu-toggle" class="menu-btn">☰</label>
-            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.png" alt="Logo CampusShop"></a>
-            <a href="carrito.html" class="carrito-link"><img class="logo" src="./img/carrito.png" alt="Carrito de compras"></a>
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">☰</label>
+            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
+            <a href="carrito.html" class="carrito-link" aria-label="Carrito de compras">
+                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                <span class="cart-count" id="cartCount" hidden>0</span>
+            </a>
         </div>
     </header>
 
     <input type="checkbox" id="menu-toggle">
 
     <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <br>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <br>
-        <li><a href="carrito.html">Carrito</a></li>
-        <br>
-        <li><a href="historial.html">Historial</a></li>
-        <br>
-        <li><a href="perfil.html">Perfil</a></li>
-        <br>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+        <label for="menu-toggle" class="menu-close" aria-label="Cerrar menú">&times;</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
     </nav>
+    <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
 
-    <main class="main_content">
-            <a class="btn2" href="carrito.html">Volver al carrito</a>
-            <h1>Checkout</h1>
-        <section class="card">
-            <div class="card_body">
-                <h2 class="title">Envío</h2>
-                <label for="">Nombre completo</label>
-                <input class="input" type="text" placeholder="Ingresa tu nombre completo">
-                <label for="">Dirección</label>
-                <input class="input" type="text" placeholder="Ingresa tu dirección">
-                <label for="">Ciudad</label>
-                <input class="input" type="text" placeholder="Ingresa tu ciudad"> 
-            </div>
-        </section>
+    <main class="main_content page-narrow">
+        <a class="btn2" href="carrito.html">Volver al carrito</a>
+        <h1>Checkout</h1>
+        <form class="checkout" id="checkoutForm" novalidate>
+            <section class="card">
+                <div class="card_body">
+                    <h2 class="title">Envío</h2>
+                    <label for="shippingName">Nombre completo</label>
+                    <input class="input" type="text" id="shippingName" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                    <label for="shippingAddress">Dirección</label>
+                    <input class="input" type="text" id="shippingAddress" name="direccion" placeholder="Ingresa tu dirección" required>
+                    <label for="shippingCity">Ciudad</label>
+                    <input class="input" type="text" id="shippingCity" name="ciudad" placeholder="Ingresa tu ciudad" required>
+                </div>
+            </section>
 
-        <section class="card">
-            <div class="card_body">
-                <h2 class="title">Métodos de pago</h2>
-                <div class="methods">
-                    <div class="payment active">
-                        <span>💳</span>
-                        <p>Visa</p>
-                    </div>
-                    <div class="payment">
-                        <span>💳</span>
-                        <p>MasterCard</p>
-                    </div><div class="payment">
-                        <span>👛</span>
-                        <p>Paypal</p>
+            <section class="card">
+                <div class="card_body">
+                    <h2 class="title">Métodos de pago</h2>
+                    <div class="methods" id="paymentMethods">
+                        <label class="payment active">
+                            <input type="radio" name="metodo" value="Visa" checked>
+                            <span>💳</span>
+                            <p>Visa</p>
+                        </label>
+                        <label class="payment">
+                            <input type="radio" name="metodo" value="MasterCard">
+                            <span>💳</span>
+                            <p>MasterCard</p>
+                        </label>
+                        <label class="payment">
+                            <input type="radio" name="metodo" value="Paypal">
+                            <span>👛</span>
+                            <p>Paypal</p>
+                        </label>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="summary">
-            <div class="card_body">
-                <h2 class="title">Resumen de tu Orden</h2>
-                <div class="item">
-                    <img src="./img/mouse_campus.webp" alt="Mouse Campuslands">
-                    <div>
-                        <p>Mouse Campuslands</p>
-                        <span>Cantidad 1</span>
+            <section class="summary card">
+                <div class="card_body">
+                    <h2 class="title">Resumen de tu Orden</h2>
+                    <div id="checkoutItems"></div>
+                    <hr>
+                    <div class="total_summary">
+                        <span>Total</span>
+                        <strong id="checkoutTotal">Q.0.00</strong>
                     </div>
-                    <strong>Q.140.00</strong>
                 </div>
-                <div class="item">
-                    <img src="./img/gorra_campus.webp" alt="Gorra Campuslands">
-                    <div>
-                        <p>Gorra Campuslands</p>
-                        <span>Cantidad 1</span>
-                    </div>
-                    <strong>Q.120.00</strong>
-                </div>
-                <div class="item">
-                    <img src="./img/jogger-nasa.webp" alt="Jogger Nasa Campuslands">
-                    <div>
-                        <p>Jogger Nasa Campuslands</p>
-                        <span>Cantidad 1</span>
-                    </div>
-                    <strong>Q.150.00</strong>
-                </div>
-            </div>
-            <hr>
-            <div class="total_summary">
-                <span>Tottal</span>
-                <strong>Q.410.00</strong>
-            </div>
-        </section>
-        <hr>
-        <a class="btn_pay" href="vacio.html">Pagar Q.410.00</a>
+            </section>
+
+            <p class="form-message" id="checkoutMessage"></p>
+            <button class="btn_pay" type="submit" id="payBtn">Pagar</button>
+        </form>
     </main>
 
     <footer class="footer">
@@ -116,5 +101,9 @@
             <p> &#174 CampusShop - Proyecto académico</p>
         </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/storage.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/checkout.js"></script>
 </body>
 </html>

@@ -1,20 +1,28 @@
 .header, .footer {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    margin: -1rem 0;
+}
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 2px 10px rgba(17, 24, 39, 0.05);
 }
 .footer {
     font-size: 0.8rem;
     color: #8A8888;
     border-top: 1px solid var(--border);
-    margin: -1rem 0;
+    padding: 1rem;
     text-align: center;
 }
 .header_content {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 1rem;
+    width: min(100% - 2rem, var(--container));
+    margin-inline: auto;
+    padding: 0.5rem 0;
 }
 .nav {
     display: flex;
@@ -22,7 +30,12 @@
     flex-wrap: wrap;
 }
 .main_content {
+    width: min(100% - 2rem, var(--container));
+    margin-inline: auto;
     padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 html, body {
     height: 100%;
@@ -33,9 +46,9 @@ body {
     flex-direction: column;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
-    font-weight: 400px;
+    font-weight: 400;
     font-style: normal;
-    margin: 10px;
+    margin: 0;
     background: var(--background);
     color: var(--text);
     line-height: 1.5;
@@ -44,29 +57,104 @@ main {
     flex: 1;
 }
 
+/* ================= MENÚ LATERAL ================= */
 #menu-toggle {
     display: none;
-  }
-  
-  /* Botón */
-  .menu-btn {
-    font-size: 24px;
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
     cursor: pointer;
-  }
-  
-  /* Menú oculto */
-  .menu {
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+.menu-btn:hover {
+    background-color: #E8F5E6;
+}
+
+/* Menú oculto */
+.menu {
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 250px;
+    left: 0;
+    z-index: 30;
+    width: min(280px, 80vw);
     height: 100%;
+    padding-top: 4.5rem;
     background: #225E22;
     color: white;
-    transition: left 0.3s ease;
-  }
-  
-  /* Cuando el checkbox está activo */
-  #menu-toggle:checked ~ .menu {
-    left: 0;
-  }
+    box-shadow: var(--shadow);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+/* Cuando el checkbox está activo */
+#menu-toggle:checked ~ .menu {
+    transform: translateX(0);
+}
+
+/* Botón para cerrar dentro del menú */
+.menu-close {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.menu-close:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Fondo oscuro detrás del menú abierto */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 25;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+#menu-toggle:checked ~ .menu-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.menu a {
+    display: block;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    transition: background-color 0.2s ease;
+}
+.menu a:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Páginas de formularios con un ancho cómodo de lectura */
+.page-narrow {
+    width: min(100% - 2rem, 720px);
+}

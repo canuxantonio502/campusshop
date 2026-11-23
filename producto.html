@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusShop - GT</title>
+    <title>Producto - CampusShop GT</title>
+    <link rel="icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/componentes.css">
     <link rel="stylesheet" href="./CSS/layout.css">
@@ -15,46 +16,37 @@
 <body>
     <header class="header">
         <div class="header_content">
-            <label for="menu-toggle" class="menu-btn">☰</label>
-            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.png" alt="Logo CampusShop"></a>
-            <a href="carrito.html" class="carrito-link"><img class="logo" src="./img/carrito.png" alt="Carrito de compras"></a>
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">☰</label>
+            <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
+            <a href="carrito.html" class="carrito-link" aria-label="Carrito de compras">
+                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                <span class="cart-count" id="cartCount" hidden>0</span>
+            </a>
         </div>
     </header>
 
     <input type="checkbox" id="menu-toggle">
 
     <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <br>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <br>
-        <li><a href="carrito.html">Carrito</a></li>
-        <br>
-        <li><a href="historial.html">Historial</a></li>
-        <br>
-        <li><a href="perfil.html">Perfil</a></li>
-        <br>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+        <label for="menu-toggle" class="menu-close" aria-label="Cerrar menú">&times;</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="historial.html">Historial</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
     </nav>
+    <label for="menu-toggle" class="menu-overlay" aria-hidden="true"></label>
 
     <main class="main_content">
         <a class="btn2" href="catalogo.html">Volver al catálogo</a>
-        <br>
-        <br>
-        <section class="card">
-            <img src="./img/gorra_campus.webp" alt="Gorra Unisex Campuslands" class="product_image">
-            <div class="card_body">
-                <h1 class="title">Gorra Unisex Campuslands</h1>
-                <p><strong>Q.120.00</strong></p>
-                <p>Gorra de algodón, cómoda y con diseño único.</p>
-                <div style="display: flex; gap: 5rem; flex-wrap: wrap; margin: 1rem 0;">
-                    <span class="badge">Garantía</span>
-                    <span class="badge">En stock</span>
-                </div>
-                <button class="btn">Agregar al carrito</button>
-            </div>
+        <section class="card product-detail" id="productDetail"></section>
+
+        <section class="content-section" id="relatedSection" hidden>
+            <h2 class="section-title">También te puede interesar</h2>
+            <div class="grid-products" id="relatedProducts"></div>
         </section>
     </main>
 
@@ -63,5 +55,9 @@
             <p> &#174 CampusShop - Proyecto académico</p>
         </div>
     </footer>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/storage.js"></script>
+    <script src="./JS/ui.js"></script>
+    <script src="./JS/producto.js"></script>
 </body>
 </html>
