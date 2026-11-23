@@ -108,20 +108,12 @@ document.addEventListener("click", e => {
     }
 })
 
-// Cerramos el menú lateral con Escape o al hacer clic fuera de él
+// Cerramos el menú lateral con Escape
+// (el clic fuera del menú lo maneja el fondo .menu-overlay)
 const menuToggle = document.getElementById("menu-toggle")
 
 document.addEventListener("keydown", e => {
     if (e.key === "Escape" && menuToggle) {
-        menuToggle.checked = false
-    }
-})
-
-document.addEventListener("click", e => {
-    if (!menuToggle || !menuToggle.checked) return
-
-    const insideMenu = e.target.closest(".menu, .menu-btn, #menu-toggle")
-    if (!insideMenu) {
         menuToggle.checked = false
     }
 })
