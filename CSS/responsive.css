@@ -43,3 +43,12 @@
         height: 84px;
     }
 }
+
+@media (min-width: 640px){
+    .precio_total p {
+        flex: 1 1 auto;
+    }
+    .precio_total .btn {
+        flex: 0 0 auto;
+    }
+}
