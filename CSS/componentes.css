@@ -697,3 +697,12 @@ label {
     outline: 2px solid var(--primary-text);
     outline-offset: 2px;
 }
+
+/* ================= IMÁGENES EN TEMA OSCURO ================= */
+/* Logo e íconos oscuros: invertimos la luminosidad conservando el tono */
+:root[data-theme="dark"] .logo-link img,
+:root[data-theme="dark"] .carrito-link img,
+:root[data-theme="dark"] .carrito img,
+:root[data-theme="dark"] .profile img {
+    filter: invert(1) hue-rotate(180deg);
+}
