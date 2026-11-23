@@ -1,9 +1,10 @@
 .logo-link {
     display: flex;
-  }
+}
 .logo-link img {
-    height: 120px;
-  }
+    width: auto;
+    height: 64px;
+}
 .title {
     margin: 0;
 }
@@ -39,9 +40,15 @@
 }
 .carrito-link {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
 }
 .carrito-link img {
-    height: 40px;
+    width: auto;
+    height: 32px;
 }
 .btn:hover {
     background: var(--primary-dark);
@@ -275,8 +282,8 @@ label {
 }
 .cart-count {
     position: absolute;
-    top: -6px;
-    right: -10px;
+    top: 0;
+    right: -4px;
     min-width: 22px;
     height: 22px;
     padding: 0 6px;

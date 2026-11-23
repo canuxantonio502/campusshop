@@ -35,3 +35,9 @@
         grid-column: auto;
     }
 }
+
+@media (min-width: 960px){
+    .logo-link img {
+        height: 84px;
+    }
+}
