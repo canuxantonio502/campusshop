@@ -70,3 +70,36 @@ main {
   #menu-toggle:checked ~ .menu {
     left: 0;
   }
+
+
+/* Botón siempre visible sobre el menú para poder cerrarlo */
+.menu-btn {
+    position: relative;
+    z-index: 20;
+    user-select: none;
+}
+body:has(#menu-toggle:checked) .menu-btn {
+    color: #fff;
+}
+.menu {
+    z-index: 10;
+    padding-top: 5rem;
+    box-shadow: var(--shadow);
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.menu a {
+    display: block;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+    transition: background-color 0.2s ease;
+}
+.menu a:hover {
+    background-color: var(--primary-dark);
+}
