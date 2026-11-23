@@ -36,7 +36,7 @@
     transition: transform 0.2s ease, background-color 0.2s ease;   
 }
 .menu-btn {
-    color: var(--primary-dark);
+    color: var(--primary-text);
 }
 .carrito-link {
     display: flex;
@@ -57,7 +57,7 @@
 .btn2 {
     display: inline-flex;
     background-color: var(--surface);
-    border: 1px solid var(--primary);
+    border: 1px solid var(--primary-text);
     border-radius: var(--radius);
     padding: 8px;
     align-self: flex-start;
@@ -73,7 +73,7 @@
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 0.9rem 1rem;
-    background: #fff;
+    background: var(--surface);
 }
 .grid-products {
     display: grid;
@@ -83,7 +83,7 @@
 .product_image {
     aspect-ratio: 1/1;
     object-fit: contain;
-    background: var(--surface);
+    background: var(--image-bg);
 }
 .product-card .product_image {
     padding: 0.75rem;
@@ -98,8 +98,8 @@
     gap: 0.35rem 0.7rem;
     padding: 0.35rem 0.7rem;
     border-radius: 999px;
-    background: #eef2ff;
-    color: var(--primary-dark);
+    background: var(--badge-bg);
+    color: var(--badge-text);
     font-size: 0.85rem;
     margin: 0;
 }
@@ -109,8 +109,8 @@
     gap: 0.35rem 0.7rem;
     padding: 0.35rem 0.7rem;
     border-radius: 999px;
-    background: #FFCEC7;
-    color: #EB2F1A;
+    background: var(--danger-bg);
+    color: var(--danger);
     font-size: 0.85rem;
     margin: 0;
 }
@@ -128,7 +128,7 @@
 .search-bar {
     width: 100%;
     border-radius: 14px;
-    background: #fff;
+    background: var(--surface);
     display: flex;
 }
 .precio {
@@ -145,7 +145,7 @@
     justify-content: space-between;
     gap: 0.75rem;
     padding: 1rem;
-    border: 1px solid var(--primary-dark);
+    border: 1px solid var(--primary-text);
     border-radius: 20px;
 }
 
@@ -161,7 +161,7 @@
     text-align: center;
 }
 .profile {
-    border: 4px solid var(--primary-dark);
+    border: 4px solid var(--primary-text);
     border-radius: 50%;
     justify-content: space-around;
     width: 150px;  /* Ajusta el ancho a tu gusto */
@@ -205,7 +205,7 @@ label {
     font-size: 1.5rem;
 }
 .payment.active {
-    border: 2px solid var(--primary-dark);
+    border: 2px solid var(--primary-text);
     background-color: var(--surface);
 }
 .item {
@@ -286,17 +286,17 @@ label {
     border-radius: var(--radius);
 }
 .comparar-table th, .comparar-table td {
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
     padding: 8px;
     width: 50%;
     border-radius: var(--radius);
 }
 .comparar-table tbody tr:nth-child(odd) {
-    background-color: #E8F5E6;
+    background-color: var(--primary-soft);
 }
 
 .comparar-table tbody tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: var(--surface);
 }
 
 .comparar-table img {
@@ -391,8 +391,8 @@ label {
 }
 .btn-outline {
     background: var(--surface);
-    color: var(--primary);
-    border: 1px solid var(--primary);
+    color: var(--primary-text);
+    border: 1px solid var(--primary-text);
 }
 .btn-outline:hover {
     color: #fff;
@@ -428,7 +428,7 @@ label {
     opacity: 1;
 }
 .toast-error {
-    background: #EB2F1A;
+    background: var(--danger);
 }
 
 /* ================= MENSAJES DE FORMULARIO ================= */
@@ -438,10 +438,10 @@ label {
     font-weight: bold;
 }
 .form-message.success {
-    color: var(--primary);
+    color: var(--primary-text);
 }
 .form-message.error {
-    color: #EB2F1A;
+    color: var(--danger);
 }
 
 /* ================= CATÁLOGO ================= */
@@ -468,7 +468,7 @@ label {
     max-height: 360px;
     padding: 1rem;
     object-fit: contain;
-    background: var(--surface);
+    background: var(--image-bg);
 }
 .product-detail .detail-price {
     font-size: 1.5rem;
@@ -509,7 +509,7 @@ label {
     cursor: pointer;
 }
 .quantity button:hover {
-    background: #E8F5E6;
+    background: var(--primary-soft);
 }
 .quantity button:disabled {
     opacity: 0.4;
@@ -558,7 +558,7 @@ label {
 .remove-btn {
     border: none;
     background: none;
-    color: #EB2F1A;
+    color: var(--danger);
     cursor: pointer;
     text-decoration: underline;
 }
@@ -592,7 +592,7 @@ label {
     margin: 0;
 }
 .input.invalid {
-    border-color: #EB2F1A;
+    border-color: var(--danger);
 }
 .btn_pay {
     width: 100%;
@@ -614,7 +614,7 @@ label {
 .order-success {
     margin: 1rem 0;
     border-color: var(--primary);
-    background: #E8F5E6;
+    background: var(--primary-soft);
 }
 .order-info p {
     margin: 0.3rem 0;

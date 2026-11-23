@@ -5,8 +5,17 @@
     --muted: #737373;
     --primary: #096E17;
     --primary-dark: #064d10;
+    --primary-text: #096E17;
+    --primary-soft: #E8F5E6;
     --accent: #D2B48C;
     --border: #e5e7eb;
+    --badge-bg: #eef2ff;
+    --badge-text: #064d10;
+    --danger: #EB2F1A;
+    --danger-bg: #FFCEC7;
+    --menu-bg: #225E22;
+    --image-bg: #ffffff;
+    --overlay: rgba(0, 0, 0, 0.4);
     --shadow: 0 4px 20px rgba(17,24,39,0.08);
     --radius: 8px;
     --container: 1200px;
