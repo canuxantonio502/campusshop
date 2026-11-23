@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusShop - GT</title>
+    <title>Mi perfil - CampusShop GT</title>
+    <link rel="icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/componentes.css">
     <link rel="stylesheet" href="./CSS/layout.css">
@@ -26,15 +27,10 @@
     <nav class="menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <br>
         <li><a href="catalogo.html">Catálogo</a></li>
-        <br>
         <li><a href="carrito.html">Carrito</a></li>
-        <br>
         <li><a href="historial.html">Historial</a></li>
-        <br>
         <li><a href="perfil.html">Perfil</a></li>
-        <br>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -47,12 +43,12 @@
                 <h2 class="title">Mi perfil</h2>
                 <div class="profile"><img src="./img/perfil.png" alt="Foto de perfil"></div>
                 <form action="">
-                    <label for="">Nombre</label>
-                    <input class="input" type="text" value="Lucas Pérez">
-                    <label for="">Correo</label>
-                    <input class="input" type="email" value="lucas@gmail.com">
-                    <label for="">Teléfono</label>
-                    <input class="input" type="text" value="1234 5678">
+                    <label for="profileName">Nombre</label>
+                    <input class="input" type="text" id="profileName" name="nombre" value="Lucas Pérez" required>
+                    <label for="profileEmail">Correo</label>
+                    <input class="input" type="email" id="profileEmail" name="correo" value="lucas@gmail.com" required>
+                    <label for="profilePhone">Teléfono</label>
+                    <input class="input" type="tel" id="profilePhone" name="telefono" value="1234 5678">
                     <hr>
                     <button class="btn">Guardar cambios</button>
                 </form>

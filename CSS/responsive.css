@@ -4,7 +4,7 @@
         align-items: center;
     }
     .grid-products {
-        grid-template-columns: (2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .categories-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -17,7 +17,7 @@
     .grid-products {
         grid-template-columns: repeat(3, 1fr);
     }
-    .main-content {
+    .main_content {
         padding: 2rem 0;
     }
 }

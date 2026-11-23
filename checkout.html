@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusShop - GT</title>
+    <title>Checkout - CampusShop GT</title>
+    <link rel="icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/componentes.css">
     <link rel="stylesheet" href="./CSS/layout.css">
@@ -26,15 +27,10 @@
     <nav class="menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <br>
         <li><a href="catalogo.html">Catálogo</a></li>
-        <br>
         <li><a href="carrito.html">Carrito</a></li>
-        <br>
         <li><a href="historial.html">Historial</a></li>
-        <br>
         <li><a href="perfil.html">Perfil</a></li>
-        <br>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -45,12 +41,12 @@
         <section class="card">
             <div class="card_body">
                 <h2 class="title">Envío</h2>
-                <label for="">Nombre completo</label>
-                <input class="input" type="text" placeholder="Ingresa tu nombre completo">
-                <label for="">Dirección</label>
-                <input class="input" type="text" placeholder="Ingresa tu dirección">
-                <label for="">Ciudad</label>
-                <input class="input" type="text" placeholder="Ingresa tu ciudad"> 
+                <label for="shippingName">Nombre completo</label>
+                <input class="input" type="text" id="shippingName" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                <label for="shippingAddress">Dirección</label>
+                <input class="input" type="text" id="shippingAddress" name="direccion" placeholder="Ingresa tu dirección" required>
+                <label for="shippingCity">Ciudad</label>
+                <input class="input" type="text" id="shippingCity" name="ciudad" placeholder="Ingresa tu ciudad" required>
             </div>
         </section>
 
@@ -103,7 +99,7 @@
             </div>
             <hr>
             <div class="total_summary">
-                <span>Tottal</span>
+                <span>Total</span>
                 <strong>Q.410.00</strong>
             </div>
         </section>

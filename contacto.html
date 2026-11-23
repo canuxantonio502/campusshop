@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusShop - GT</title>
+    <title>Contacto - CampusShop GT</title>
+    <link rel="icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/componentes.css">
     <link rel="stylesheet" href="./CSS/layout.css">
@@ -26,15 +27,10 @@
     <nav class="menu">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <br>
         <li><a href="catalogo.html">Catálogo</a></li>
-        <br>
         <li><a href="carrito.html">Carrito</a></li>
-        <br>
         <li><a href="historial.html">Historial</a></li>
-        <br>
         <li><a href="perfil.html">Perfil</a></li>
-        <br>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -53,12 +49,12 @@
             <div class="card_body">
                 <h2 class="title">Envíanos un mensaje</h2>
                 <form class="contact">
-                    <label>Nombre</label>
-                    <input class="input" type="text" placeholder="Tu nombre">
-                    <label>Correo electrónico</label>
-                    <input class="input" type="text" placeholder="tu@email.com">
-                    <label>Mensaje</label>
-                    <textarea class="textarea" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+                    <label for="contactName">Nombre</label>
+                    <input class="input" type="text" id="contactName" name="nombre" placeholder="Tu nombre" required>
+                    <label for="contactEmail">Correo electrónico</label>
+                    <input class="input" type="email" id="contactEmail" name="correo" placeholder="tu@email.com" required>
+                    <label for="contactMessage">Mensaje</label>
+                    <textarea class="textarea" id="contactMessage" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
                     <button class="btn">Enviar mensaje</button>
                 </form>
                 <p style="color: var(--muted);">* Este formulario es solo visual</p>
