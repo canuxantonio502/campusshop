@@ -444,3 +444,51 @@ label {
     min-width: 2rem;
     text-align: center;
 }
+
+/* ================= CARRITO ================= */
+.cart-list {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.cart-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+}
+.cart-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+.cart-item h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.1rem;
+}
+.cart-item p {
+    margin: 0;
+    color: var(--muted);
+}
+.cart-item-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.remove-btn {
+    border: none;
+    background: none;
+    color: #EB2F1A;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.card_body_empty {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
