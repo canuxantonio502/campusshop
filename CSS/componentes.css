@@ -393,3 +393,54 @@ label {
     color: var(--muted);
     padding: 2rem 1rem;
 }
+
+/* ================= DETALLE DE PRODUCTO ================= */
+.product-detail .product_image {
+    max-height: 480px;
+    object-fit: contain;
+    background: var(--surface);
+}
+.product-detail .detail-price {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+.detail-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+.detail-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ================= SELECTOR DE CANTIDAD ================= */
+.quantity {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+.quantity button {
+    border: none;
+    background: var(--surface);
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.quantity button:hover {
+    background: #E8F5E6;
+}
+.quantity button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+.quantity span {
+    min-width: 2rem;
+    text-align: center;
+}

@@ -42,18 +42,11 @@
         <a class="btn2" href="catalogo.html">Volver al catálogo</a>
         <br>
         <br>
-        <section class="card">
-            <img src="./img/gorra_campus.webp" alt="Gorra Unisex Campuslands" class="product_image">
-            <div class="card_body">
-                <h1 class="title">Gorra Unisex Campuslands</h1>
-                <p><strong>Q.120.00</strong></p>
-                <p>Gorra de algodón, cómoda y con diseño único.</p>
-                <div style="display: flex; gap: 5rem; flex-wrap: wrap; margin: 1rem 0;">
-                    <span class="badge">Garantía</span>
-                    <span class="badge">En stock</span>
-                </div>
-                <button class="btn">Agregar al carrito</button>
-            </div>
+        <section class="card product-detail" id="productDetail"></section>
+
+        <section class="content-section" id="relatedSection" hidden>
+            <h2 class="section-title">También te puede interesar</h2>
+            <div class="grid-products" id="relatedProducts"></div>
         </section>
     </main>
 
@@ -65,5 +58,6 @@
     <script src="./JS/productos.js"></script>
     <script src="./JS/storage.js"></script>
     <script src="./JS/ui.js"></script>
+    <script src="./JS/producto.js"></script>
 </body>
 </html>
