@@ -27,6 +27,7 @@ que guarda la información en el navegador mediante `LocalStorage`.
 - **Comparador:** compara dos productos cualquiera.
 - **Perfil de usuario:** los cambios se guardan y se reutilizan en el checkout y el contacto.
 - **Contacto:** formulario con validación que guarda los mensajes.
+- **Tema claro y oscuro:** botón en el encabezado que recuerda la elección; si no hay una guardada, usa el tema del sistema.
 - **Diseño responsivo** con menú lateral.
 
 ## :floppy_disk: Datos en LocalStorage
@@ -36,6 +37,7 @@ que guarda la información en el navegador mediante `LocalStorage`.
 | `orders` | Pedidos realizados |
 | `profile` | Datos del perfil |
 | `messages` | Mensajes enviados desde contacto |
+| `theme` | Tema elegido (`light` o `dark`) |
 
 ## :bone: Estructura del proyecto
 ```text
@@ -65,6 +67,7 @@ campusshop/
 │   ├── productos.js    # Datos de los productos
 │   ├── storage.js      # Carrito, pedidos, perfil y mensajes
 │   ├── ui.js           # Utilidades y componentes compartidos
+│   ├── tema.js         # Tema claro / oscuro
 │   ├── catalogo.js
 │   ├── producto.js
 │   ├── carrito.js
