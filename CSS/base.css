@@ -5,12 +5,45 @@
     --muted: #737373;
     --primary: #096E17;
     --primary-dark: #064d10;
+    --primary-text: #096E17;
+    --primary-soft: #E8F5E6;
     --accent: #D2B48C;
     --border: #e5e7eb;
+    --badge-bg: #eef2ff;
+    --badge-text: #064d10;
+    --danger: #EB2F1A;
+    --danger-bg: #FFCEC7;
+    --menu-bg: #225E22;
+    --image-bg: #ffffff;
+    --overlay: rgba(0, 0, 0, 0.4);
     --shadow: 0 4px 20px rgba(17,24,39,0.08);
     --radius: 8px;
     --container: 1200px;
+    color-scheme: light;
 }
+
+/* ================= TEMA OSCURO ================= */
+:root[data-theme="dark"] {
+    --background: #0F1411;
+    --surface: #1A211C;
+    --text: #E8ECE9;
+    --muted: #9BA59E;
+    --primary: #0B7F1B;
+    --primary-dark: #096E17;
+    --primary-text: #6FCF7C;
+    --primary-soft: #1F3324;
+    --border: #2C352F;
+    --badge-bg: #243028;
+    --badge-text: #A7E3AF;
+    --danger: #FF6B5A;
+    --danger-bg: #3A1F1C;
+    --menu-bg: #14301A;
+    --image-bg: #ffffff;
+    --overlay: rgba(0, 0, 0, 0.6);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -38,4 +71,8 @@ button, input, select, textarea {
 .container {
     width: min(100% -2rem, var(--container));
     margin-inline: auto;
+}hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0;
 }

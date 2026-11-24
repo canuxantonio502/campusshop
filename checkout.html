@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - CampusShop GT</title>
     <link rel="icon" href="./img/logo.png" type="image/png">
+    <script src="./JS/tema.js"></script>
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/componentes.css">
     <link rel="stylesheet" href="./CSS/layout.css">
@@ -18,10 +19,13 @@
         <div class="header_content">
             <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">☰</label>
             <a href="index.html" class="logo-link"><img class="logo" src="./img/logo.webp" alt="Logo CampusShop" width="120" height="120"></a>
-            <a href="carrito.html" class="carrito-link" aria-label="Carrito de compras">
-                <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
-                <span class="cart-count" id="cartCount" hidden>0</span>
-            </a>
+            <div class="header-actions">
+                <button class="theme-toggle" type="button" id="themeToggle" aria-label="Cambiar tema"></button>
+                <a href="carrito.html" class="carrito-link" aria-label="Carrito de compras">
+                    <img class="logo" src="./img/carrito.png" alt="Carrito de compras">
+                    <span class="cart-count" id="cartCount" hidden>0</span>
+                </a>
+            </div>
         </div>
     </header>
 
